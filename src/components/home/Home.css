@@ -1,0 +1,62 @@
+.home-top{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 5px 5px 5px 5px;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.food, .automobile, .nature{
+    margin-right: 20px;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    text-align: center;
+    background-color:#7c7cdc;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px, 8px, 8px, 8px;
+}
+
+.food:focus, .automobile:focus, .nature:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 2px #5a01a7;
+    transition: 0.2s;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.food:hover {
+    background-color: #ffbf00;
+    opacity: 0.5;
+}
+.automobile:hover {
+    background-color: #347db1;
+    opacity: 0.5;
+}
+.nature:hover{
+    background-color: #24ca4b;
+    opacity: 0.5;
+}
+.content{
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.content:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
