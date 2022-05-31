@@ -2,12 +2,15 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { foods, natures, automobiles } from '../../api/data';
+import { Loader} from '../loader/Loader';
 import './Home.css';
 
 export function Home() {
     const [image, setimage] = useState([]);
+    const [isLoading, setisLoading]=useState(true);
     useEffect(() => {
       setimage(foods);
+      setTimeout(() => setisLoading(false), 2000);
     }, []);
 
     function getFood(){
@@ -28,6 +31,7 @@ export function Home() {
                 <button className='nature' onClick={getNature}>Nature</button>
         </div>
         <div className='home-middle'>
+        {isLoading ? <Loader/> :
             <div className='card'>
                 {
                     image.map((img)=>{
@@ -35,6 +39,7 @@ export function Home() {
               })
                 }
               </div>
+        }
         </div>
         <div className='home-bottom'></div>
     </div>
